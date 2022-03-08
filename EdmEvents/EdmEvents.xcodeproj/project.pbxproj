@@ -15,6 +15,7 @@
 		B23B79D727D6CF5F00A7ED52 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79D627D6CF5F00A7ED52 /* Constants.swift */; };
 		B23B79D927D7010200A7ED52 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79D827D7010200A7ED52 /* EventViewModel.swift */; };
 		B23B79DB27D707B600A7ED52 /* VenueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79DA27D707B600A7ED52 /* VenueViewModel.swift */; };
+		B23B79DD27D712C400A7ED52 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79DC27D712C400A7ED52 /* Config.swift */; };
 		B2D7CCE527D676E500C70711 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7CCE427D676E500C70711 /* AppDelegate.swift */; };
 		B2D7CCE727D676E500C70711 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7CCE627D676E500C70711 /* SceneDelegate.swift */; };
 		B2D7CCE927D676E500C70711 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7CCE827D676E500C70711 /* ViewController.swift */; };
@@ -25,7 +26,6 @@
 		B2D7CCFB27D6793000C70711 /* EdmTrainAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7CCFA27D6793000C70711 /* EdmTrainAPIRequest.swift */; };
 		B2D7CCFE27D67A0100C70711 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7CCFD27D67A0100C70711 /* Locations.swift */; };
 		B2D7CD0027D67A2C00C70711 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7CCFF27D67A2C00C70711 /* Location.swift */; };
-		B2D7CD0227D67D3600C70711 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7CD0127D67D3600C70711 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +37,7 @@
 		B23B79D627D6CF5F00A7ED52 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B23B79D827D7010200A7ED52 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		B23B79DA27D707B600A7ED52 /* VenueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewModel.swift; sourceTree = "<group>"; };
+		B23B79DC27D712C400A7ED52 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		B2D7CCE127D676E500C70711 /* EdmEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdmEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2D7CCE427D676E500C70711 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2D7CCE627D676E500C70711 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,7 +50,6 @@
 		B2D7CCFA27D6793000C70711 /* EdmTrainAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdmTrainAPIRequest.swift; sourceTree = "<group>"; };
 		B2D7CCFD27D67A0100C70711 /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		B2D7CCFF27D67A2C00C70711 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		B2D7CD0127D67D3600C70711 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +124,8 @@
 		B2D7CD0327D67D6100C70711 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				B2D7CD0127D67D3600C70711 /* Config.swift */,
 				B23B79D627D6CF5F00A7ED52 /* Constants.swift */,
+				B23B79DC27D712C400A7ED52 /* Config.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -209,12 +209,12 @@
 				B23B79CE27D6889000A7ED52 /* Event.swift in Sources */,
 				B23B79D227D6898300A7ED52 /* Artist.swift in Sources */,
 				B2D7CCFB27D6793000C70711 /* EdmTrainAPIRequest.swift in Sources */,
-				B2D7CD0227D67D3600C70711 /* Config.swift in Sources */,
 				B23B79D527D68BF900A7ED52 /* LocationViewModel.swift in Sources */,
 				B23B79CC27D6887C00A7ED52 /* Events.swift in Sources */,
 				B23B79D727D6CF5F00A7ED52 /* Constants.swift in Sources */,
 				B2D7CCE727D676E500C70711 /* SceneDelegate.swift in Sources */,
 				B23B79D927D7010200A7ED52 /* EventViewModel.swift in Sources */,
+				B23B79DD27D712C400A7ED52 /* Config.swift in Sources */,
 				B23B79DB27D707B600A7ED52 /* VenueViewModel.swift in Sources */,
 				B2D7CD0027D67A2C00C70711 /* Location.swift in Sources */,
 			);
