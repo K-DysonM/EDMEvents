@@ -15,9 +15,25 @@ struct VenueViewModel {
 			return venue.name
 		}
 	}
-	var address: String {
+	var primaryAddress: String {
 		get {
 			return formatPrimaryAddress(venue: venue)
+		}
+	}
+	var subAddress: String {
+		get {
+			return formatSecondaryAddress(venue: venue)
+		}
+	}
+	
+	var isAddress: Bool {
+		get {
+			return venue.address != nil
+		}
+	}
+	var simpleAddress: String {
+		get {
+			return "\(venue.name) - \(venue.location)"
 		}
 	}
 	
@@ -28,12 +44,16 @@ struct VenueViewModel {
 	func formatPrimaryAddress(venue: Venue) -> String{
 		guard let address = venue.address else { return venue.location}
 		let separated = address.split(separator: ",", maxSplits: 1)
-		guard separated.count < 2 else { return String(separated.first!) }
-		let addressString =
-		"""
-		\(separated.first!)
-		\(separated[1])
-		"""
+		let addressString = separated.first!.trimmingCharacters(in: .whitespaces)
+		return addressString
+	}
+	
+	func formatSecondaryAddress(venue: Venue) -> String{
+		guard let address = venue.address else { return venue.location}
+		let separated = address.split(separator: ",", maxSplits: 1)
+		
+		guard separated.count >= 2 else { return venue.location }
+		let addressString = separated[1].trimmingCharacters(in: .whitespaces)
 		return addressString
 	}
 }

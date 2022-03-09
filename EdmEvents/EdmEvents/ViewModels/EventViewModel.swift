@@ -47,10 +47,11 @@ struct EventViewModel {
 	
 	private func formatLineupString(_ artistList: [Artist]) -> String {
 		guard !artistList.isEmpty else { return "No known lineup" }
-		var artistsString = ""
-		artistList.forEach { artist in
+		var artistsString = artistList[0].name
+		artistList[1...].forEach { artist in
 			artistsString += ", \(artist.name)"
 		}
+
 		return artistsString
 	}
 	

@@ -11,3 +11,11 @@ import Foundation
 enum AppError: String {
 	case URLImproperFormat = "url not formatted properly"
 }
+
+enum AppUIColor: String {
+	case Button = "Button"
+	case SecondaryLabel = "SecondaryLabel"
+	case Accent = "Accent"
+}
+
+
