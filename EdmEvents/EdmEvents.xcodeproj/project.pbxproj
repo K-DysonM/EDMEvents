@@ -17,10 +17,10 @@
 		B23B79DB27D707B600A7ED52 /* VenueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79DA27D707B600A7ED52 /* VenueViewModel.swift */; };
 		B23B79DD27D712C400A7ED52 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79DC27D712C400A7ED52 /* Config.swift */; };
 		B23B79E027D79CDA00A7ED52 /* VenueDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79DF27D79CDA00A7ED52 /* VenueDetailView.swift */; };
-		B23B79E227D7A06700A7ED52 /* Extensions+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79E127D7A06700A7ED52 /* Extensions+UIColor.swift */; };
 		B23B79E427D7D35700A7ED52 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79E327D7D35700A7ED52 /* EventTableViewCell.swift */; };
 		B23B79E627D7D7B800A7ED52 /* VenueSimpleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79E527D7D7B800A7ED52 /* VenueSimpleView.swift */; };
-		B23B79E827D82A7E00A7ED52 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79E727D82A7E00A7ED52 /* SampleData.swift */; };
+		B23B79E827D82A7E00A7ED52 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79E727D82A7E00A7ED52 /* MockData.swift */; };
+		B23B79EA27D83C5600A7ED52 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79E927D83C5600A7ED52 /* LocationTableViewCell.swift */; };
 		B2D7CCE527D676E500C70711 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7CCE427D676E500C70711 /* AppDelegate.swift */; };
 		B2D7CCE727D676E500C70711 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7CCE627D676E500C70711 /* SceneDelegate.swift */; };
 		B2D7CCE927D676E500C70711 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7CCE827D676E500C70711 /* ViewController.swift */; };
@@ -31,7 +31,45 @@
 		B2D7CCFB27D6793000C70711 /* EdmTrainAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7CCFA27D6793000C70711 /* EdmTrainAPIRequest.swift */; };
 		B2D7CCFE27D67A0100C70711 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7CCFD27D67A0100C70711 /* Locations.swift */; };
 		B2D7CD0027D67A2C00C70711 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7CCFF27D67A2C00C70711 /* Location.swift */; };
+		B2EBB75727D9316500EC0483 /* EdmEventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EBB75627D9316500EC0483 /* EdmEventsTests.swift */; };
+		B2EBB76627D93B5400EC0483 /* EdmEventsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EBB76527D93B5400EC0483 /* EdmEventsUITests.swift */; };
+		B2EBB76827D93B5400EC0483 /* EdmEventsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EBB76727D93B5400EC0483 /* EdmEventsUITestsLaunchTests.swift */; };
+		B2EBB78027D93F3300EC0483 /* VenueSimpleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79E527D7D7B800A7ED52 /* VenueSimpleView.swift */; };
+		B2EBB78127D93F3300EC0483 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79E927D83C5600A7ED52 /* LocationTableViewCell.swift */; };
+		B2EBB78227D93F3300EC0483 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79E327D7D35700A7ED52 /* EventTableViewCell.swift */; };
+		B2EBB78327D93F3300EC0483 /* VenueDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79DF27D79CDA00A7ED52 /* VenueDetailView.swift */; };
+		B2EBB78427D93F3600EC0483 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7CCFD27D67A0100C70711 /* Locations.swift */; };
+		B2EBB78527D93F3600EC0483 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79CD27D6889000A7ED52 /* Event.swift */; };
+		B2EBB78627D93F3600EC0483 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7CCFF27D67A2C00C70711 /* Location.swift */; };
+		B2EBB78727D93F3600EC0483 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79CB27D6887C00A7ED52 /* Events.swift */; };
+		B2EBB78827D93F3600EC0483 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79CF27D6891E00A7ED52 /* Venue.swift */; };
+		B2EBB78927D93F3600EC0483 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79D127D6898300A7ED52 /* Artist.swift */; };
+		B2EBB78A27D93F3A00EC0483 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79D627D6CF5F00A7ED52 /* Constants.swift */; };
+		B2EBB78B27D93F3A00EC0483 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79DC27D712C400A7ED52 /* Config.swift */; };
+		B2EBB78D27D93F3A00EC0483 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79E727D82A7E00A7ED52 /* MockData.swift */; };
+		B2EBB78E27D93F3E00EC0483 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79D427D68BF900A7ED52 /* LocationViewModel.swift */; };
+		B2EBB78F27D93F3E00EC0483 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7CCF827D6771F00C70711 /* EventsViewModel.swift */; };
+		B2EBB79027D93F3E00EC0483 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79D827D7010200A7ED52 /* EventViewModel.swift */; };
+		B2EBB79127D93F3E00EC0483 /* VenueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79DA27D707B600A7ED52 /* VenueViewModel.swift */; };
+		B2EBB79227D93F5200EC0483 /* EdmTrainAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7CCFA27D6793000C70711 /* EdmTrainAPIRequest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B2EBB75827D9316500EC0483 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2D7CCD927D676E500C70711 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2D7CCE027D676E500C70711;
+			remoteInfo = EdmEvents;
+		};
+		B2EBB76927D93B5400EC0483 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2D7CCD927D676E500C70711 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2D7CCE027D676E500C70711;
+			remoteInfo = EdmEvents;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B23B79CB27D6887C00A7ED52 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
@@ -44,10 +82,10 @@
 		B23B79DA27D707B600A7ED52 /* VenueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewModel.swift; sourceTree = "<group>"; };
 		B23B79DC27D712C400A7ED52 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		B23B79DF27D79CDA00A7ED52 /* VenueDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailView.swift; sourceTree = "<group>"; };
-		B23B79E127D7A06700A7ED52 /* Extensions+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIColor.swift"; sourceTree = "<group>"; };
 		B23B79E327D7D35700A7ED52 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		B23B79E527D7D7B800A7ED52 /* VenueSimpleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueSimpleView.swift; sourceTree = "<group>"; };
-		B23B79E727D82A7E00A7ED52 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		B23B79E727D82A7E00A7ED52 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		B23B79E927D83C5600A7ED52 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
 		B2D7CCE127D676E500C70711 /* EdmEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdmEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2D7CCE427D676E500C70711 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2D7CCE627D676E500C70711 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,10 +98,29 @@
 		B2D7CCFA27D6793000C70711 /* EdmTrainAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdmTrainAPIRequest.swift; sourceTree = "<group>"; };
 		B2D7CCFD27D67A0100C70711 /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		B2D7CCFF27D67A2C00C70711 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		B2EBB75427D9316500EC0483 /* EdmEventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdmEventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2EBB75627D9316500EC0483 /* EdmEventsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdmEventsTests.swift; sourceTree = "<group>"; };
+		B2EBB76327D93B5400EC0483 /* EdmEventsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdmEventsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2EBB76527D93B5400EC0483 /* EdmEventsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdmEventsUITests.swift; sourceTree = "<group>"; };
+		B2EBB76727D93B5400EC0483 /* EdmEventsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdmEventsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B2D7CCDE27D676E500C70711 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2EBB75127D9316500EC0483 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2EBB76027D93B5400EC0483 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -90,6 +147,7 @@
 				B23B79DF27D79CDA00A7ED52 /* VenueDetailView.swift */,
 				B23B79E327D7D35700A7ED52 /* EventTableViewCell.swift */,
 				B23B79E527D7D7B800A7ED52 /* VenueSimpleView.swift */,
+				B23B79E927D83C5600A7ED52 /* LocationTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -98,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				B2D7CCE327D676E500C70711 /* EdmEvents */,
+				B2EBB75527D9316500EC0483 /* EdmEventsTests */,
+				B2EBB76427D93B5400EC0483 /* EdmEventsUITests */,
 				B2D7CCE227D676E500C70711 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,6 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				B2D7CCE127D676E500C70711 /* EdmEvents.app */,
+				B2EBB75427D9316500EC0483 /* EdmEventsTests.xctest */,
+				B2EBB76327D93B5400EC0483 /* EdmEventsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,10 +209,26 @@
 			children = (
 				B23B79D627D6CF5F00A7ED52 /* Constants.swift */,
 				B23B79DC27D712C400A7ED52 /* Config.swift */,
-				B23B79E127D7A06700A7ED52 /* Extensions+UIColor.swift */,
-				B23B79E727D82A7E00A7ED52 /* SampleData.swift */,
+				B23B79E727D82A7E00A7ED52 /* MockData.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		B2EBB75527D9316500EC0483 /* EdmEventsTests */ = {
+			isa = PBXGroup;
+			children = (
+				B2EBB75627D9316500EC0483 /* EdmEventsTests.swift */,
+			);
+			path = EdmEventsTests;
+			sourceTree = "<group>";
+		};
+		B2EBB76427D93B5400EC0483 /* EdmEventsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B2EBB76527D93B5400EC0483 /* EdmEventsUITests.swift */,
+				B2EBB76727D93B5400EC0483 /* EdmEventsUITestsLaunchTests.swift */,
+			);
+			path = EdmEventsUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +251,42 @@
 			productReference = B2D7CCE127D676E500C70711 /* EdmEvents.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B2EBB75327D9316500EC0483 /* EdmEventsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2EBB75C27D9316500EC0483 /* Build configuration list for PBXNativeTarget "EdmEventsTests" */;
+			buildPhases = (
+				B2EBB75027D9316500EC0483 /* Sources */,
+				B2EBB75127D9316500EC0483 /* Frameworks */,
+				B2EBB75227D9316500EC0483 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2EBB75927D9316500EC0483 /* PBXTargetDependency */,
+			);
+			name = EdmEventsTests;
+			productName = EdmEventsTests;
+			productReference = B2EBB75427D9316500EC0483 /* EdmEventsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B2EBB76227D93B5400EC0483 /* EdmEventsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2EBB76B27D93B5400EC0483 /* Build configuration list for PBXNativeTarget "EdmEventsUITests" */;
+			buildPhases = (
+				B2EBB75F27D93B5400EC0483 /* Sources */,
+				B2EBB76027D93B5400EC0483 /* Frameworks */,
+				B2EBB76127D93B5400EC0483 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2EBB76A27D93B5400EC0483 /* PBXTargetDependency */,
+			);
+			name = EdmEventsUITests;
+			productName = EdmEventsUITests;
+			productReference = B2EBB76327D93B5400EC0483 /* EdmEventsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -185,6 +299,14 @@
 				TargetAttributes = {
 					B2D7CCE027D676E500C70711 = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					B2EBB75327D9316500EC0483 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = B2D7CCE027D676E500C70711;
+					};
+					B2EBB76227D93B5400EC0483 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = B2D7CCE027D676E500C70711;
 					};
 				};
 			};
@@ -202,6 +324,8 @@
 			projectRoot = "";
 			targets = (
 				B2D7CCE027D676E500C70711 /* EdmEvents */,
+				B2EBB75327D9316500EC0483 /* EdmEventsTests */,
+				B2EBB76227D93B5400EC0483 /* EdmEventsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -217,6 +341,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B2EBB75227D9316500EC0483 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2EBB76127D93B5400EC0483 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -225,13 +363,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B23B79E627D7D7B800A7ED52 /* VenueSimpleView.swift in Sources */,
-				B23B79E827D82A7E00A7ED52 /* SampleData.swift in Sources */,
+				B23B79E827D82A7E00A7ED52 /* MockData.swift in Sources */,
 				B2D7CCFE27D67A0100C70711 /* Locations.swift in Sources */,
 				B2D7CCE927D676E500C70711 /* ViewController.swift in Sources */,
 				B2D7CCF927D6772000C70711 /* EventsViewModel.swift in Sources */,
-				B23B79E227D7A06700A7ED52 /* Extensions+UIColor.swift in Sources */,
 				B2D7CCE527D676E500C70711 /* AppDelegate.swift in Sources */,
 				B23B79E027D79CDA00A7ED52 /* VenueDetailView.swift in Sources */,
+				B23B79EA27D83C5600A7ED52 /* LocationTableViewCell.swift in Sources */,
 				B23B79D027D6891E00A7ED52 /* Venue.swift in Sources */,
 				B23B79CE27D6889000A7ED52 /* Event.swift in Sources */,
 				B23B79D227D6898300A7ED52 /* Artist.swift in Sources */,
@@ -248,7 +386,55 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B2EBB75027D9316500EC0483 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2EBB75727D9316500EC0483 /* EdmEventsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2EBB75F27D93B5400EC0483 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2EBB78527D93F3600EC0483 /* Event.swift in Sources */,
+				B2EBB78027D93F3300EC0483 /* VenueSimpleView.swift in Sources */,
+				B2EBB76827D93B5400EC0483 /* EdmEventsUITestsLaunchTests.swift in Sources */,
+				B2EBB78B27D93F3A00EC0483 /* Config.swift in Sources */,
+				B2EBB78127D93F3300EC0483 /* LocationTableViewCell.swift in Sources */,
+				B2EBB78827D93F3600EC0483 /* Venue.swift in Sources */,
+				B2EBB79127D93F3E00EC0483 /* VenueViewModel.swift in Sources */,
+				B2EBB78727D93F3600EC0483 /* Events.swift in Sources */,
+				B2EBB78927D93F3600EC0483 /* Artist.swift in Sources */,
+				B2EBB79027D93F3E00EC0483 /* EventViewModel.swift in Sources */,
+				B2EBB78E27D93F3E00EC0483 /* LocationViewModel.swift in Sources */,
+				B2EBB78A27D93F3A00EC0483 /* Constants.swift in Sources */,
+				B2EBB78627D93F3600EC0483 /* Location.swift in Sources */,
+				B2EBB79227D93F5200EC0483 /* EdmTrainAPIRequest.swift in Sources */,
+				B2EBB78427D93F3600EC0483 /* Locations.swift in Sources */,
+				B2EBB78327D93F3300EC0483 /* VenueDetailView.swift in Sources */,
+				B2EBB78D27D93F3A00EC0483 /* MockData.swift in Sources */,
+				B2EBB78F27D93F3E00EC0483 /* EventsViewModel.swift in Sources */,
+				B2EBB78227D93F3300EC0483 /* EventTableViewCell.swift in Sources */,
+				B2EBB76627D93B5400EC0483 /* EdmEventsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B2EBB75927D9316500EC0483 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2D7CCE027D676E500C70711 /* EdmEvents */;
+			targetProxy = B2EBB75827D9316500EC0483 /* PBXContainerItemProxy */;
+		};
+		B2EBB76A27D93B5400EC0483 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2D7CCE027D676E500C70711 /* EdmEvents */;
+			targetProxy = B2EBB76927D93B5400EC0483 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B2D7CCEA27D676E500C70711 /* Main.storyboard */ = {
@@ -321,7 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -376,7 +562,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -394,6 +580,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AK54934WQ2;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EdmEvents/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -423,6 +610,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AK54934WQ2;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EdmEvents/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -444,6 +632,78 @@
 			};
 			name = Release;
 		};
+		B2EBB75A27D9316500EC0483 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AK54934WQ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KianaDyson.EdmEventsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EdmEvents.app/EdmEvents";
+			};
+			name = Debug;
+		};
+		B2EBB75B27D9316500EC0483 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AK54934WQ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KianaDyson.EdmEventsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EdmEvents.app/EdmEvents";
+			};
+			name = Release;
+		};
+		B2EBB76C27D93B5400EC0483 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AK54934WQ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KianaDyson.EdmEventsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EdmEvents;
+			};
+			name = Debug;
+		};
+		B2EBB76D27D93B5400EC0483 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AK54934WQ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KianaDyson.EdmEventsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EdmEvents;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -461,6 +721,24 @@
 			buildConfigurations = (
 				B2D7CCF627D676E700C70711 /* Debug */,
 				B2D7CCF727D676E700C70711 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2EBB75C27D9316500EC0483 /* Build configuration list for PBXNativeTarget "EdmEventsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2EBB75A27D9316500EC0483 /* Debug */,
+				B2EBB75B27D9316500EC0483 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2EBB76B27D93B5400EC0483 /* Build configuration list for PBXNativeTarget "EdmEventsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2EBB76C27D93B5400EC0483 /* Debug */,
+				B2EBB76D27D93B5400EC0483 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -9,10 +9,14 @@ import Foundation
 import Combine
 import CoreLocation
 
-class EventsViewModel {
+class EventsViewModel: ObservableObject, Identifiable {
 	@Published var locations: [LocationViewModel] = []
 	@Published var events: [EventViewModel] = []
 	
+	
+	init() {
+		fetchAvailableLocations()
+	}
 	
 	func getNearbyEvents(at location: Location) {
 		let url = formatNearbyEventsUrl(for: location)

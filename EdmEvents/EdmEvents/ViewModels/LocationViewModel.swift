@@ -8,34 +8,30 @@
 import Foundation
 import CoreLocation
 
-struct LocationViewModel {
-	let location: Location
+class LocationViewModel {
+	private var location: Location
 	
-	private var city: String?
-	private var state: String
+	@Published private(set) var primary: String = ""
+	@Published private(set) var secondary: String = ""
 	
 	init(withLocation location: Location) {
 		self.location = location
-		self.city = location.city
-		self.state = location.state
-	}
-	func getPrimary() -> String {
-		return city ?? state
-	}	
-	func getSecondary() -> String {
-		return state
+		configureOutput()
 	}
 	
-	func getCountryCode(completionHandler: @escaping (String) -> Void){
-		var secondary = state
-		let clLocation = CLLocation(latitude: location.latitude, longitude: location.longitude)
-		print(CLGeocoder().isGeocoding)
-		CLGeocoder().reverseGeocodeLocation(clLocation) { placemarks, error in
-			print(error?.localizedDescription ?? "")
-			if let countryCode = placemarks?.first?.isoCountryCode {
-				secondary += ", \(countryCode)"
-			}
-			completionHandler(secondary)
+	func changeLocation(to location: Location) {
+		self.location = location
+		self.primary = location.city ?? "Empty"
+		self.secondary = location.state
+	}
+	
+	private func configureOutput() {
+		primary = location.city ?? location.state
+		if location.city != nil {
+			secondary = location.state
+		} else {
+			secondary = location.stateCode
 		}
 	}
 }
+

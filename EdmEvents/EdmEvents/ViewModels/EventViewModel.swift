@@ -7,42 +7,38 @@
 
 import Foundation
 
-struct EventViewModel {
+class EventViewModel {
 	private let event: Event
 	let venueViewModel: VenueViewModel
-	var name: String
 	
-	var lineup: String {
-		get {
-			return formatLineupString(event.artistList)
-		}
-	}
-	var date: Date {
-		get {
-			return formatDate(event.date)
-		}
-	}
-	var venueInformation: String {
-		get {
-			return formatVenueString(event.venue)
-		}
-	}
+	@Published var name: String = ""
+	@Published var lineup: String = ""
+	@Published var date: String = ""
+	@Published var venueInformation: String = ""
 	
 	init(withEvent myEvent: Event) {
 		self.event = myEvent
-		self.name = myEvent.name ?? myEvent.artistList.first?.name ?? myEvent.venue.name
-		self.venueViewModel = VenueViewModel(withVenue: myEvent.venue)
+		self.venueViewModel = VenueViewModel(withVenue: event.venue)
+		configureOutput()
 	}
-	
-	private func formatDate(_ dateString: String) -> Date{
+	private func configureOutput() {
+		self.lineup = formatLineupString(event.artistList)
+		self.venueInformation = formatVenueString(event.venue)
+		self.date = formatDate(event.date)
+		self.name = event.name ?? event.artistList.first?.name ?? event.venue.name
+	}
+	private func formatDate(_ dateString: String) -> String{
 		let dateFormatter = DateFormatter()
 		dateFormatter.dateFormat = "yyyy-MM-dd"
 		let date = dateFormatter.date(from:dateString)!
-		return date
+		dateFormatter.dateFormat = "MM-dd-yyyy"
+		let newString = dateFormatter.string(from: date)
+		return newString
 	}
 	
 	private func formatVenueString(_ venue: Venue) -> String{
-		return "\(venue.name) - \(venue.location)"
+		let formatString = "\(venue.name) - \(venue.location)"
+		return formatString.trimmingCharacters(in: .whitespacesAndNewlines)
 	}
 	
 	private func formatLineupString(_ artistList: [Artist]) -> String {

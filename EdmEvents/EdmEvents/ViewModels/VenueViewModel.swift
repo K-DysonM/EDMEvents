@@ -7,48 +7,35 @@
 
 import Foundation
 
-struct VenueViewModel {
+class VenueViewModel {
 	private let venue: Venue
 	
-	var name: String {
-		get {
-			return venue.name
-		}
-	}
-	var primaryAddress: String {
-		get {
-			return formatPrimaryAddress(venue: venue)
-		}
-	}
-	var subAddress: String {
-		get {
-			return formatSecondaryAddress(venue: venue)
-		}
-	}
-	
-	var isAddress: Bool {
-		get {
-			return venue.address != nil
-		}
-	}
-	var simpleAddress: String {
-		get {
-			return "\(venue.name) - \(venue.location)"
-		}
-	}
+	@Published var name: String = ""
+	@Published var primaryAddress: String = ""
+	@Published var secondaryAddress: String = ""
+	@Published var isAddress: Bool = false
+	@Published var simpleAddress: String = ""
 	
 	init(withVenue venue: Venue) {
 		self.venue = venue
+		configureOutput()
+	}
+	private func configureOutput() {
+		self.name = venue.name
+		self.primaryAddress = formatPrimaryAddress(venue: venue)
+		self.secondaryAddress = formatSecondaryAddress(venue: venue)
+		self.isAddress = venue.address != nil
+		self.simpleAddress = "\(venue.name) - \(venue.location)"
 	}
 	
-	func formatPrimaryAddress(venue: Venue) -> String{
+	private func formatPrimaryAddress(venue: Venue) -> String{
 		guard let address = venue.address else { return venue.location}
 		let separated = address.split(separator: ",", maxSplits: 1)
 		let addressString = separated.first!.trimmingCharacters(in: .whitespaces)
 		return addressString
 	}
 	
-	func formatSecondaryAddress(venue: Venue) -> String{
+	private func formatSecondaryAddress(venue: Venue) -> String{
 		guard let address = venue.address else { return venue.location}
 		let separated = address.split(separator: ",", maxSplits: 1)
 		

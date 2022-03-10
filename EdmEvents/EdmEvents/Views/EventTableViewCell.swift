@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import Combine
 
 class EventTableViewCell: UITableViewCell {
-
+	private var subscriptions = Set<AnyCancellable>()
+	var eventViewModel: EventViewModel?
+	
 	// MARK: - UI Setup
 	
 	var titleLabel: UILabel = {
@@ -55,7 +58,6 @@ class EventTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
 	
 	// MARK: - Layout UI
@@ -78,8 +80,12 @@ class EventTableViewCell: UITableViewCell {
 	// MARK: - Configuration
 	
 	func configure(with eventViewModel: EventViewModel) {
-		titleLabel.text = eventViewModel.name
-		subtitleLabel.text = eventViewModel.lineup
+		self.eventViewModel = eventViewModel
+		subscriptions = [
+			eventViewModel.$name.assign(to: \.text!, on: titleLabel),
+			eventViewModel.$lineup.assign(to: \.text!, on: subtitleLabel)
+		]
+		
 		venueSimpleView.configure(with: eventViewModel.venueViewModel)
 	}
 

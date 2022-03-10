@@ -16,3 +16,14 @@ struct Venue: Codable {
 	var latitude: Float?
 	var longitude: Float?
 }
+extension Venue {
+	static func fake() -> Self {
+		return Venue(id: 1,
+					 name: "The Venue Name",
+					 location: "City, SC",
+					 address: "Address, City, SC Zip, Country",
+					 state: "The State",
+					 latitude: 40.67,
+					 longitude: -73.996)
+	}
+}

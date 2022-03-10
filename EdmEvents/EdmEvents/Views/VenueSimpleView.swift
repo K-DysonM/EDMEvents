@@ -7,9 +7,11 @@
 
 import UIKit
 import CoreLocation
+import Combine
 
 class VenueSimpleView: UIView {
-
+	var venueViewModel: VenueViewModel?
+	private var subscriptions = Set<AnyCancellable>()
 	// MARK: - UI Setup
 	
 	var icon: UIImageView = {
@@ -28,14 +30,6 @@ class VenueSimpleView: UIView {
 		return label
 	}()
 	
-	var stack: UIStackView = {
-		let stack = UIStackView()
-		stack.axis = .horizontal
-		//stack.spacing = 8
-		stack.distribution = .fill
-		return stack
-	}()
-	
 	required init?(coder: NSCoder) {
 		super.init(coder: coder)
 		layoutUI()
@@ -49,13 +43,9 @@ class VenueSimpleView: UIView {
 	
 	func layoutUI() {
 		[icon, titleLabel].forEach {
-			//stack.addArrangedSubview($0)
 			addSubview($0)
 			$0.translatesAutoresizingMaskIntoConstraints = false
 		}
-		//addSubview(stack)
-		//stack.translatesAutoresizingMaskIntoConstraints = false
-		stack.backgroundColor = .red
 		NSLayoutConstraint.activate(
 			[icon.leadingAnchor.constraint(equalTo: leadingAnchor),
 			 icon.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.6),
@@ -71,7 +61,8 @@ class VenueSimpleView: UIView {
 	// MARK: - Configuration
 	
 	func configure(with venueViewModel: VenueViewModel) {
-		titleLabel.text = venueViewModel.simpleAddress
+		self.venueViewModel = venueViewModel
+		venueViewModel.$simpleAddress.assign(to: \.text!, on: titleLabel).store(in: &subscriptions)
 	}
 
 }

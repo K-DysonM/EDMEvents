@@ -5,10 +5,14 @@
 //  Created by Kiana Dyson on 3/8/22.
 //
 
-import Foundation
 import UIKit
+import Combine
 
 class VenueDetailView: UIView {
+	
+	var viewModel: VenueViewModel?
+	private var subscriptions = Set<AnyCancellable>()
+	
 	
 	// MARK: - UI Setup
 	
@@ -100,17 +104,25 @@ class VenueDetailView: UIView {
 	// MARK: - Configuration
 	
 	func configure(with venueViewModel: VenueViewModel) {
-		titleLabel.text = venueViewModel.name
-		subtitleLabel.text = venueViewModel.primaryAddress
-		secondarySubtitleLabel.text = venueViewModel.subAddress
+		self.viewModel = venueViewModel
 		
-		if venueViewModel.isAddress {
-			button.setTitle("View Map", for: .normal)
-			secondarySubtitleLabel.isHidden = false
-		} else {
-			button.setTitle("View Link", for: .normal)
-			secondarySubtitleLabel.isHidden = true
-		}
+		subscriptions = [
+			venueViewModel.$name.assign(to: \.text!, on: titleLabel),
+			venueViewModel.$primaryAddress.assign(to: \.text!, on: subtitleLabel),
+			venueViewModel.$secondaryAddress.assign(to: \.text!, on: secondarySubtitleLabel),
+		]
+		
+		venueViewModel.$isAddress.sink { [weak self] result in
+			guard let self = self else { return }
+			if result {
+				self.button.setTitle("View Map", for: .normal)
+				self.secondarySubtitleLabel.isHidden = false
+			} else {
+				self.button.setTitle("View Link", for: .normal)
+				self.secondarySubtitleLabel.isHidden = true
+			}
+		}.store(in: &subscriptions)
+
 	}
 }
 
