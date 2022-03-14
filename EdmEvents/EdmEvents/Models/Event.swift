@@ -18,11 +18,11 @@ struct Event: Codable {
 }
 extension Event {
 	static func fake() -> Self {
-		return Event(id: 1,
-					 link: "",
-					 name: "The Event name",
-					 ages: nil,
-					 date: "2022-03-08",
+		return Event(id: 167913,
+					 link: "https://edmtrain.com/columbus-oh/baynk-167913?utm_source=131&;amp;utm_medium=api",
+					 name: nil,
+					 ages: "18+",
+					 date: "2022-03-10",
 					 venue: Venue.fake(),
 					 artistList: [Artist.fake()])
 	}

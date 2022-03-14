@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MapKit
 
 class VenueViewModel {
 	private let venue: Venue
@@ -20,6 +21,15 @@ class VenueViewModel {
 		self.venue = venue
 		configureOutput()
 	}
+	func getCoordinates() -> CLLocationCoordinate2D? {
+		if let lat = venue.latitude, let long = venue.longitude {
+			let coordinate = CLLocationCoordinate2DMake(Double(lat), Double(long))
+			return coordinate
+		} else {
+			return nil
+		}
+	}
+	
 	private func configureOutput() {
 		self.name = venue.name
 		self.primaryAddress = formatPrimaryAddress(venue: venue)
@@ -27,7 +37,6 @@ class VenueViewModel {
 		self.isAddress = venue.address != nil
 		self.simpleAddress = "\(venue.name) - \(venue.location)"
 	}
-	
 	private func formatPrimaryAddress(venue: Venue) -> String{
 		guard let address = venue.address else { return venue.location}
 		let separated = address.split(separator: ",", maxSplits: 1)

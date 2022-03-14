@@ -15,8 +15,8 @@ struct Artist: Codable {
 }
 extension Artist {
 	static func fake() -> Self {
-		return Artist(id: 123,
-					  name: "The Band Name",
+		return Artist(id: 6266,
+					  name: "BAYNK",
 					  link: nil,
 					  b2bInd: false)
 	}

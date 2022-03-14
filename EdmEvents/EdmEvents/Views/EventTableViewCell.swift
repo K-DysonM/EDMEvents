@@ -70,8 +70,8 @@ class EventTableViewCell: UITableViewCell {
 		contentView.addSubview(stack)
 		stack.translatesAutoresizingMaskIntoConstraints = false
 		NSLayoutConstraint.activate(
-			[stack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-			 stack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+			[stack.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
+			 stack.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
 			 stack.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
 			 stack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
 			])

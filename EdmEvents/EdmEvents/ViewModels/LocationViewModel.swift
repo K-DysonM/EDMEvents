@@ -9,7 +9,7 @@ import Foundation
 import CoreLocation
 
 class LocationViewModel {
-	private var location: Location
+	private(set) var location: Location
 	
 	@Published private(set) var primary: String = ""
 	@Published private(set) var secondary: String = ""

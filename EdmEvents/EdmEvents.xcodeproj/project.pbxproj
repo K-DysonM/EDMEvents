@@ -21,9 +21,21 @@
 		B23B79E627D7D7B800A7ED52 /* VenueSimpleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79E527D7D7B800A7ED52 /* VenueSimpleView.swift */; };
 		B23B79E827D82A7E00A7ED52 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79E727D82A7E00A7ED52 /* MockData.swift */; };
 		B23B79EA27D83C5600A7ED52 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23B79E927D83C5600A7ED52 /* LocationTableViewCell.swift */; };
+		B29B2B3427DAEE0D00DAF87E /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29B2B3327DAEE0D00DAF87E /* Favorite.swift */; };
+		B29B2B3727DB91F800DAF87E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29B2B3627DB91F800DAF87E /* Coordinator.swift */; };
+		B29B2B3927DB953800DAF87E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29B2B3827DB953800DAF87E /* MainCoordinator.swift */; };
+		B29B2B3C27DB9F6C00DAF87E /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29B2B3B27DB9F6C00DAF87E /* EventViewController.swift */; };
+		B29B2B4027DC2D7900DAF87E /* EventViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29B2B3F27DC2D7900DAF87E /* EventViewModelDelegate.swift */; };
+		B29B2B4627DC655A00DAF87E /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29B2B4527DC655A00DAF87E /* HomeCoordinator.swift */; };
+		B29B2B4827DC731700DAF87E /* FavoriteCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29B2B4727DC731700DAF87E /* FavoriteCoordinator.swift */; };
+		B29B2B4A27DC77AE00DAF87E /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29B2B4927DC77AE00DAF87E /* LocationViewController.swift */; };
+		B29B2B4C27DD777D00DAF87E /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29B2B4B27DD777D00DAF87E /* FavoriteViewController.swift */; };
+		B29B2B4E27DE813400DAF87E /* CustomEventHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29B2B4D27DE813400DAF87E /* CustomEventHeader.swift */; };
+		B29B2B5027DEBF8700DAF87E /* OpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29B2B4F27DEBF8700DAF87E /* OpenViewController.swift */; };
+		B29B2B5427DEDE5F00DAF87E /* FavoriteEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29B2B5327DEDE5F00DAF87E /* FavoriteEmptyView.swift */; };
 		B2D7CCE527D676E500C70711 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7CCE427D676E500C70711 /* AppDelegate.swift */; };
 		B2D7CCE727D676E500C70711 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7CCE627D676E500C70711 /* SceneDelegate.swift */; };
-		B2D7CCE927D676E500C70711 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7CCE827D676E500C70711 /* ViewController.swift */; };
+		B2D7CCE927D676E500C70711 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7CCE827D676E500C70711 /* HomeViewController.swift */; };
 		B2D7CCEC27D676E500C70711 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2D7CCEA27D676E500C70711 /* Main.storyboard */; };
 		B2D7CCEE27D676E700C70711 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2D7CCED27D676E700C70711 /* Assets.xcassets */; };
 		B2D7CCF127D676E700C70711 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2D7CCEF27D676E700C70711 /* LaunchScreen.storyboard */; };
@@ -86,10 +98,22 @@
 		B23B79E527D7D7B800A7ED52 /* VenueSimpleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueSimpleView.swift; sourceTree = "<group>"; };
 		B23B79E727D82A7E00A7ED52 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		B23B79E927D83C5600A7ED52 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		B29B2B3327DAEE0D00DAF87E /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		B29B2B3627DB91F800DAF87E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B29B2B3827DB953800DAF87E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		B29B2B3B27DB9F6C00DAF87E /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		B29B2B3F27DC2D7900DAF87E /* EventViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModelDelegate.swift; sourceTree = "<group>"; };
+		B29B2B4527DC655A00DAF87E /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		B29B2B4727DC731700DAF87E /* FavoriteCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCoordinator.swift; sourceTree = "<group>"; };
+		B29B2B4927DC77AE00DAF87E /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		B29B2B4B27DD777D00DAF87E /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		B29B2B4D27DE813400DAF87E /* CustomEventHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEventHeader.swift; sourceTree = "<group>"; };
+		B29B2B4F27DEBF8700DAF87E /* OpenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenViewController.swift; sourceTree = "<group>"; };
+		B29B2B5327DEDE5F00DAF87E /* FavoriteEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteEmptyView.swift; sourceTree = "<group>"; };
 		B2D7CCE127D676E500C70711 /* EdmEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdmEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2D7CCE427D676E500C70711 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2D7CCE627D676E500C70711 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B2D7CCE827D676E500C70711 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B2D7CCE827D676E500C70711 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B2D7CCEB27D676E500C70711 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2D7CCED27D676E700C70711 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2D7CCF027D676E700C70711 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -137,6 +161,7 @@
 				B23B79D427D68BF900A7ED52 /* LocationViewModel.swift */,
 				B23B79D827D7010200A7ED52 /* EventViewModel.swift */,
 				B23B79DA27D707B600A7ED52 /* VenueViewModel.swift */,
+				B29B2B3F27DC2D7900DAF87E /* EventViewModelDelegate.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -144,12 +169,38 @@
 		B23B79DE27D79CB200A7ED52 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B29B2B3A27DB9F2A00DAF87E /* ViewControllers */,
 				B23B79DF27D79CDA00A7ED52 /* VenueDetailView.swift */,
 				B23B79E327D7D35700A7ED52 /* EventTableViewCell.swift */,
 				B23B79E527D7D7B800A7ED52 /* VenueSimpleView.swift */,
+				B29B2B5327DEDE5F00DAF87E /* FavoriteEmptyView.swift */,
 				B23B79E927D83C5600A7ED52 /* LocationTableViewCell.swift */,
+				B29B2B4D27DE813400DAF87E /* CustomEventHeader.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B29B2B3527DB91E600DAF87E /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				B29B2B3627DB91F800DAF87E /* Coordinator.swift */,
+				B29B2B3827DB953800DAF87E /* MainCoordinator.swift */,
+				B29B2B4527DC655A00DAF87E /* HomeCoordinator.swift */,
+				B29B2B4727DC731700DAF87E /* FavoriteCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		B29B2B3A27DB9F2A00DAF87E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B2D7CCE827D676E500C70711 /* HomeViewController.swift */,
+				B29B2B3B27DB9F6C00DAF87E /* EventViewController.swift */,
+				B29B2B4927DC77AE00DAF87E /* LocationViewController.swift */,
+				B29B2B4B27DD777D00DAF87E /* FavoriteViewController.swift */,
+				B29B2B4F27DEBF8700DAF87E /* OpenViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		B2D7CCD827D676E500C70711 = {
@@ -175,13 +226,13 @@
 		B2D7CCE327D676E500C70711 /* EdmEvents */ = {
 			isa = PBXGroup;
 			children = (
+				B29B2B3527DB91E600DAF87E /* Coordinators */,
 				B2D7CD0327D67D6100C70711 /* App */,
 				B2D7CCFC27D679F400C70711 /* Models */,
 				B23B79DE27D79CB200A7ED52 /* Views */,
 				B23B79D327D68BEA00A7ED52 /* ViewModels */,
 				B2D7CCE427D676E500C70711 /* AppDelegate.swift */,
 				B2D7CCE627D676E500C70711 /* SceneDelegate.swift */,
-				B2D7CCE827D676E500C70711 /* ViewController.swift */,
 				B2D7CCEA27D676E500C70711 /* Main.storyboard */,
 				B2D7CCED27D676E700C70711 /* Assets.xcassets */,
 				B2D7CCEF27D676E700C70711 /* LaunchScreen.storyboard */,
@@ -200,6 +251,7 @@
 				B23B79CD27D6889000A7ED52 /* Event.swift */,
 				B23B79CF27D6891E00A7ED52 /* Venue.swift */,
 				B23B79D127D6898300A7ED52 /* Artist.swift */,
+				B29B2B3327DAEE0D00DAF87E /* Favorite.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -362,23 +414,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B29B2B4827DC731700DAF87E /* FavoriteCoordinator.swift in Sources */,
 				B23B79E627D7D7B800A7ED52 /* VenueSimpleView.swift in Sources */,
+				B29B2B3927DB953800DAF87E /* MainCoordinator.swift in Sources */,
 				B23B79E827D82A7E00A7ED52 /* MockData.swift in Sources */,
+				B29B2B5027DEBF8700DAF87E /* OpenViewController.swift in Sources */,
+				B29B2B4E27DE813400DAF87E /* CustomEventHeader.swift in Sources */,
+				B29B2B4C27DD777D00DAF87E /* FavoriteViewController.swift in Sources */,
 				B2D7CCFE27D67A0100C70711 /* Locations.swift in Sources */,
-				B2D7CCE927D676E500C70711 /* ViewController.swift in Sources */,
+				B2D7CCE927D676E500C70711 /* HomeViewController.swift in Sources */,
+				B29B2B4627DC655A00DAF87E /* HomeCoordinator.swift in Sources */,
 				B2D7CCF927D6772000C70711 /* EventsViewModel.swift in Sources */,
 				B2D7CCE527D676E500C70711 /* AppDelegate.swift in Sources */,
 				B23B79E027D79CDA00A7ED52 /* VenueDetailView.swift in Sources */,
 				B23B79EA27D83C5600A7ED52 /* LocationTableViewCell.swift in Sources */,
 				B23B79D027D6891E00A7ED52 /* Venue.swift in Sources */,
+				B29B2B3C27DB9F6C00DAF87E /* EventViewController.swift in Sources */,
 				B23B79CE27D6889000A7ED52 /* Event.swift in Sources */,
 				B23B79D227D6898300A7ED52 /* Artist.swift in Sources */,
 				B2D7CCFB27D6793000C70711 /* EdmTrainAPIRequest.swift in Sources */,
 				B23B79D527D68BF900A7ED52 /* LocationViewModel.swift in Sources */,
+				B29B2B4A27DC77AE00DAF87E /* LocationViewController.swift in Sources */,
 				B23B79E427D7D35700A7ED52 /* EventTableViewCell.swift in Sources */,
 				B23B79CC27D6887C00A7ED52 /* Events.swift in Sources */,
 				B23B79D727D6CF5F00A7ED52 /* Constants.swift in Sources */,
 				B2D7CCE727D676E500C70711 /* SceneDelegate.swift in Sources */,
+				B29B2B5427DEDE5F00DAF87E /* FavoriteEmptyView.swift in Sources */,
+				B29B2B3727DB91F800DAF87E /* Coordinator.swift in Sources */,
+				B29B2B4027DC2D7900DAF87E /* EventViewModelDelegate.swift in Sources */,
+				B29B2B3427DAEE0D00DAF87E /* Favorite.swift in Sources */,
 				B23B79D927D7010200A7ED52 /* EventViewModel.swift in Sources */,
 				B23B79DD27D712C400A7ED52 /* Config.swift in Sources */,
 				B23B79DB27D707B600A7ED52 /* VenueViewModel.swift in Sources */,
@@ -585,7 +649,6 @@
 				INFOPLIST_FILE = EdmEvents/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -615,7 +678,6 @@
 				INFOPLIST_FILE = EdmEvents/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

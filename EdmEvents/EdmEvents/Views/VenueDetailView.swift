@@ -55,7 +55,7 @@ class VenueDetailView: UIView {
 		let button = UIButton()
 		button.setTitle("View Map", for: .normal)
 		button.setTitleColor(UIColor(named: AppUIColor.Button.rawValue), for: .normal)
-		button.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .medium)
+		//button.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .medium)
 		return button
 	}()
 	

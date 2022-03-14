@@ -18,12 +18,12 @@ struct Venue: Codable {
 }
 extension Venue {
 	static func fake() -> Self {
-		return Venue(id: 1,
-					 name: "The Venue Name",
-					 location: "City, SC",
-					 address: "Address, City, SC Zip, Country",
-					 state: "The State",
-					 latitude: 40.67,
-					 longitude: -73.996)
+		return Venue(id: 809,
+					 name: "Skully's Music Diner",
+					 location: "Columbus, OH",
+					 address: "1151 N High St, Columbus, OH 43201, USA",
+					 state: "Ohio",
+					 latitude: 39.986,
+					 longitude: -83.006)
 	}
 }
