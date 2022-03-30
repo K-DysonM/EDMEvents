@@ -13,7 +13,6 @@ import CoreLocation
 
 class EventsViewModel: ObservableObject, Identifiable {
 	@Published var locations: [LocationViewModel] = []
-	@Published var events: [EventViewModel] = []
 	@Published var favorites: [EventViewModel] = []
 	@Published var defaultLocationModel: LocationViewModel? = nil
 	
@@ -24,7 +23,17 @@ class EventsViewModel: ObservableObject, Identifiable {
 	}
 	@Published var eventDates: [String]  = []
 	
-	private func organizeEvents() {
+	private var defaultLocation: Location? = nil {
+		didSet {
+			guard let defaultLocation = defaultLocation else { return }
+			defaultLocationModel = LocationViewModel(withLocation: defaultLocation)
+			getNearbyEvents(at: defaultLocation)
+		}
+	}
+	
+	// Converts events into a dictionary where the key is the date
+	// and the value is the array of events at that date
+	private func organizeEvents(_ events: [EventViewModel]) {
 		events.forEach { vm in
 			if eventsDict[vm.event.date] == nil {
 				eventsDict[vm.event.date] = [vm]
@@ -34,42 +43,25 @@ class EventsViewModel: ObservableObject, Identifiable {
 		}
 	}
 	
-	private var defaultLocation: Location? = nil {
-		didSet {
-			guard let defaultLocation = defaultLocation else { return }
-			defaultLocationModel = LocationViewModel(withLocation: defaultLocation)
-			getNearbyEvents(at: defaultLocation)
-		}
-	}
-	
 	init() {
 		fetchSavedInformation()
 		fetchAvailableLocations()
-		//fetchFavorites()
 	}
 	
+	// MARK: - Loading User Saved information
 	func fetchSavedInformation() {
 		fetchSavedLocation()
 		fetchFavorites()
 	}
-	
-	private func fetchSavedLocation() {
-		let defaults = UserDefaults.standard
-		if let data = defaults.data(forKey: K.UserDefaults_Location) {
-			let decoder = JSONDecoder()
-			if let location = try? decoder.decode(Location.self, from: data) {
-				defaultLocation = location
-			}
-		}
+	func saveUserInformation() {
+		saveDefaultLocation()
+		saveFavorites()
 	}
+	
 	func setDefaultLocation(_ location: Location) {
 		eventDates.removeAll(keepingCapacity: true)
 		eventsDict.removeAll(keepingCapacity: true)
 		defaultLocation = location
-	}
-	func saveUserInformation() {
-		saveDefaultLocation()
-		saveFavorites()
 	}
 	
 	private func saveDefaultLocation () {
@@ -79,6 +71,15 @@ class EventsViewModel: ObservableObject, Identifiable {
 		if let data = try? encoder.encode(defaultLocation) {
 			let defaults = UserDefaults.standard
 			defaults.set(data, forKey: K.UserDefaults_Location)
+		}
+	}
+	private func fetchSavedLocation() {
+		let defaults = UserDefaults.standard
+		if let data = defaults.data(forKey: K.UserDefaults_Location) {
+			let decoder = JSONDecoder()
+			if let location = try? decoder.decode(Location.self, from: data) {
+				defaultLocation = location
+			}
 		}
 	}
 	
@@ -108,8 +109,11 @@ class EventsViewModel: ObservableObject, Identifiable {
 			}
 		}
 	}
+	
+	// MARK: - EmdTrain Api Query functions
+	
 	func getEventById(favorite: Favorite) {
-		let url = formatEventsQuery(artstId: favorite.artistId, venueId: favorite.venueId, startDate: favorite.startDate)
+		let url = EdmTrainUrl().formatEventsQuery(artstId: favorite.artistId, venueId: favorite.venueId, startDate: favorite.startDate)
 		let request = EdmTrainAPIRequest(url: url)
 		request.perform { [weak self] (events: Events?, error) in
 			guard let self = self else { return }
@@ -123,7 +127,7 @@ class EventsViewModel: ObservableObject, Identifiable {
 	}
 	
 	func getNearbyEvents(at location: Location) {
-		let url = formatNearbyEventsUrl(for: location)
+		let url = EdmTrainUrl().formatNearbyEventsUrl(for: location)
 		let request = EdmTrainAPIRequest(url: url)
 		request.perform { [weak self] (events: Events?, error) in
 			guard let self = self else { return }
@@ -135,12 +139,11 @@ class EventsViewModel: ObservableObject, Identifiable {
 				let vm = EventViewModel(withEvent: event)
 				return vm
 			}
-			self.events = viewModels
-			self.organizeEvents()
+			self.organizeEvents(viewModels)
 		}
 	}
 	func fetchAvailableLocations() {
-		let url = formatLocationsUrl()
+		let url = EdmTrainUrl().formatLocationsUrl()
 		let request = EdmTrainAPIRequest(url: url)
 		request.perform { [weak self] (locations: Locations?, error)  in
 			guard let self = self else { return }
@@ -157,40 +160,6 @@ class EventsViewModel: ObservableObject, Identifiable {
 
 	}
 	
-	private func formatNearbyEventsUrl(for location: Location) -> URL {
-		let trimmedState = location.state.replacingOccurrences(of: " ", with: "")
-		let urlString =
-			"""
-			https://edmtrain.com/api/events?latitude=\(location.latitude)\
-			&longitude=\(location.longitude)\
-			&state=\(trimmedState)\
-			&client=\(EDMTRAIN_API_KEY)
-			"""
-		guard let url = URL(string: urlString) else { fatalError(AppError.URLImproperFormat.rawValue) }
-		return url
-	}
-	
-	private func formatEventsQuery(artstId: Int, venueId: Int, startDate: String ) -> URL {
-		let urlString =
-		 """
-		 https://edmtrain.com/api/events?artistIds=\(artstId)\
-		 &venueIds=\(venueId)\
-		 &startDate=\(startDate)\
-		 &client=\(EDMTRAIN_API_KEY)
-		 """
-		
-		guard let url = URL(string: urlString) else { fatalError(AppError.URLImproperFormat.rawValue) }
-		return url
-	}
-	
-	private func formatLocationsUrl() -> URL {
-		let urlString = "https://edmtrain.com/api/locations?client=\(EDMTRAIN_API_KEY)"
-		guard let url = URL(string: urlString) else { fatalError(AppError.URLImproperFormat.rawValue) }
-		return url
-	}
-	
-	
-	
 }
 extension EventsViewModel: EventViewModelDelegate {
 	func onFavorited(_ eventViewModel: EventViewModel) {
@@ -199,10 +168,8 @@ extension EventsViewModel: EventViewModelDelegate {
 			vm.event.id == eventViewModel.event.id
 		}
 		if let index = index {
-			//eventViewModel.isFavorite = false
 			favorites.remove(at: index)
 		} else {
-			//eventViewModel.isFavorite = true
 			favorites.append(eventViewModel)
 		}
 	}

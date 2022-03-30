@@ -27,6 +27,38 @@ struct EdmTrainAPIRequest {
 		task.resume()
 	}
 }
+struct EdmTrainUrl {
+	func formatLocationsUrl() -> URL {
+		let urlString = "https://edmtrain.com/api/locations?client=\(EDMTRAIN_API_KEY)"
+		guard let url = URL(string: urlString) else { fatalError(AppError.URLImproperFormat.rawValue) }
+		return url
+	}
+	
+	func formatEventsQuery(artstId: Int, venueId: Int, startDate: String ) -> URL {
+		let urlString =
+		   """
+		   https://edmtrain.com/api/events?artistIds=\(artstId)\
+		   &venueIds=\(venueId)\
+		   &startDate=\(startDate)\
+		   &client=\(EDMTRAIN_API_KEY)
+		   """
+		
+		guard let url = URL(string: urlString) else { fatalError(AppError.URLImproperFormat.rawValue) }
+		return url
+	}
+	func formatNearbyEventsUrl(for location: Location) -> URL {
+		let trimmedState = location.state.replacingOccurrences(of: " ", with: "")
+		let urlString =
+		   """
+		   https://edmtrain.com/api/events?latitude=\(location.latitude)\
+		   &longitude=\(location.longitude)\
+		   &state=\(trimmedState)\
+		   &client=\(EDMTRAIN_API_KEY)
+		   """
+		guard let url = URL(string: urlString) else { fatalError(AppError.URLImproperFormat.rawValue) }
+		return url
+	}
+}
 enum EdmApiResultCode {
 	case invalidAppKey
 	case locationNotFound
@@ -41,7 +73,3 @@ extension EdmApiResultCode {
 		}
 	}
 }
-
-
-//Invalid client
-//Location not found

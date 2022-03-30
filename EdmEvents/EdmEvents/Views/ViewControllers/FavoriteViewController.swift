@@ -49,7 +49,7 @@ class FavoriteViewController: UITableViewController {
 		print(#function)
 		if eventsViewModel.favorites.isEmpty {
 			let emptyView = TableEmptyView(frame: tableView.safeAreaLayoutGuide.layoutFrame)
-			emptyView.configure(title: "Favorites", message: "You don't have any favorites yet. All your favorites will show up here")
+			emptyView.configure(title: "Favorites", message: "You don't have any favorites yet")
 			tableView.backgroundView = emptyView
 			tableView.separatorStyle = .none
 		} else {
